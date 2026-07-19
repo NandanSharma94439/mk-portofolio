@@ -14,8 +14,6 @@ A modern, responsive portfolio website showcasing my software development projec
 ## 🛠 Tech Stack
 
 - React
-- Vite
-- Tailwind CSS
 - JavaScript
 - HTML5
 - CSS3
