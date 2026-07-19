@@ -1,0 +1,251 @@
+/* =========================
+   Hero Section
+========================= */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+    min-height:100vh;
+
+    padding:140px 8% 100px;
+
+    background:linear-gradient(
+        135deg,
+        #f8fafc 0%,
+        #ffffff 45%,
+        #f1fff8 100%
+    );
+
+}
+.hero-glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.45;
+
+    z-index:0;
+
+    animation:floatGlow 8s ease-in-out infinite;
+
+}
+.glow-one{
+
+    width:320px;
+
+    height:320px;
+
+    background:#16c784;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+.glow-two{
+
+    width:380px;
+
+    height:380px;
+
+    background:#60a5fa;
+
+    bottom:-180px;
+
+    right:-180px;
+
+    animation-duration:12s;
+
+}
+.hero-content{
+    flex:1;
+    position:relative;
+    z-index:2;
+}
+
+.hero-content h1{
+
+    font-size:68px;
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+    color:#0f172a;
+
+    max-width:700px;
+
+    margin-bottom:28px;
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:#667085;
+
+    max-width:620px;
+
+    margin-bottom:42px;
+
+}
+
+
+/* =========================
+   Hero Buttons
+========================= */
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+    align-items:center;
+
+}
+
+.btn{
+
+    display:inline-block;
+    text-decoration:none;
+    padding:18px 34px;
+    border-radius:16px;
+    font-weight:600;
+    font-size:16px;
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease,
+        color .3s ease;
+}
+
+.primary-btn{
+
+    background:#2bc795;
+    color:white;
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 40px rgba(22,199,132,.25);
+
+}
+
+.secondary-btn{
+
+    border:2px solid #2bc795;
+    color:#2bc795;
+}
+
+.secondary-btn:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#16c784;
+
+}
+
+
+/* =========================
+   Hero Image
+========================= */
+
+.hero-image{
+
+    width:430px;
+    height:520px;
+    flex-shrink:0;
+    overflow:hidden;
+    border-radius:28px;
+    box-shadow:0 40px 80px rgba(22,199,132,.15);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+    position:relative;
+    z-index:2;
+    isolation:isolate;
+    overflow:hidden;
+}
+
+.hero-image:hover{
+
+    transform:
+        translateY(-5px)
+        scale(.99);
+    box-shadow:
+        0 40px 80px rgba(0,0,0,.25);
+}
+.hero-image:hover img{
+    transform: scale(1.05);
+}
+.hero-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    transition:
+        transform .6s ease,
+        filter .6s ease;
+
+}
+
+.hero-image:hover img{
+
+    transform:scale(1.05);
+    filter:brightness(1.04);
+
+}
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(15,23,42,.04) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(15,23,42,.04) 1px,
+            transparent 1px
+        );
+
+    background-size:70px 70px;
+
+    opacity:.45;
+
+    z-index:0;
+
+}

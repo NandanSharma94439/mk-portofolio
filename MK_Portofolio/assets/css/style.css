@@ -1,0 +1,40 @@
+/* Imports from css/section*/
+
+@import url("./sections/header.css");
+@import url("./sections/hero.css");
+@import url("./sections/about.css");
+@import url("./sections/statistics.css");
+@import url("./sections/philosophy.css");
+@import url("./sections/performance.css");
+@import url("./sections/contact.css");
+
+/* Imports from css/utilities */
+
+@import url("./utilities/animation.css");
+
+
+/* =========================
+   Global Styles
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:linear-gradient(135deg,#f5f7fa,#e9eef5,#fdfdfd);
+    color:#111827;
+    min-height:100vh;
+}
+section{
+
+    scroll-margin-top:140px;
+
+}

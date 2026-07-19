@@ -1,0 +1,305 @@
+/* ===========================
+   Statistics Section
+=========================== */
+
+.statistics{
+    position:relative;
+    padding:120px 8%;
+    overflow:hidden;
+}
+
+/* Decorative Glow */
+
+.statistics::before{
+    content:"";
+    position:absolute;
+    top:-250px;
+    left:-180px;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(59,130,246,.08);
+    filter:blur(120px);
+    pointer-events:none;
+}
+
+.statistics::after{
+    content:"";
+    position:absolute;
+    bottom:-250px;
+    right:-180px;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(0,255,200,.05);
+    filter:blur(140px);
+    pointer-events:none;
+}
+
+/* ===========================
+   Section Heading
+=========================== */
+
+.section-title{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 70px;
+}
+
+.section-title h2{
+
+    font-size:2.9rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+}
+
+.section-title p{
+
+    font-size:1.05rem;
+
+    color:#9ca3af;
+
+    line-height:1.8;
+}
+
+/* ===========================
+   Statistics Grid
+=========================== */
+
+.stats-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+
+/* ===========================
+   Statistic Card
+=========================== */
+
+.stat-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:50px 30px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.03));
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    transition:
+    transform .4s ease,
+    box-shadow .4s ease,
+    border-color .4s ease,
+    background .4s ease;
+}
+
+/* Top Accent */
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:2px;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    #3b82f6,
+    transparent);
+
+    transition:left .6s ease;
+}
+
+/* Soft Glow */
+
+.stat-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(59,130,246,.12),
+    transparent 70%);
+
+    opacity:0;
+
+    transition:opacity .4s ease;
+
+    pointer-events:none;
+}
+
+/* Number */
+
+.stat-card h3{
+
+    font-size:3.2rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin-bottom:18px;
+
+    letter-spacing:1px;
+
+    transition:color .3s ease;
+}
+
+/* Text */
+
+.stat-card p{
+
+    color:#9ca3af;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+    line-height:1.7;
+
+    transition:color .3s ease;
+}
+
+/* Hover */
+
+.stat-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    border-color:
+    rgba(59,130,246,.35);
+
+    background:
+    linear-gradient(
+    145deg,
+    rgba(59,130,246,.10),
+    rgba(255,255,255,.04));
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.35),
+    0 0 35px rgba(59,130,246,.15);
+}
+
+.stat-card:hover::before{
+
+    left:100%;
+}
+
+.stat-card:hover::after{
+
+    opacity:1;
+}
+
+.stat-card:hover h3{
+
+    color:#60a5fa;
+}
+
+.stat-card:hover p{
+
+    color:#d1d5db;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:1100px){
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:700px){
+
+.statistics{
+
+padding:90px 6%;
+
+}
+
+.section-title{
+
+margin-bottom:50px;
+
+}
+
+.section-title h2{
+
+font-size:2.2rem;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.stat-card{
+
+padding:40px 25px;
+
+}
+
+.stat-card h3{
+
+font-size:2.7rem;
+
+}
+
+}

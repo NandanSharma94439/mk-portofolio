@@ -1,0 +1,367 @@
+/* ==========================================================
+   PHILOSOPHY SECTION
+========================================================== */
+
+.philosophy{
+
+    position: relative;
+    overflow: hidden;
+    padding: 150px 0;
+
+    background:
+
+        radial-gradient(
+        circle at 85% 15%,
+        rgba(147,197,253,.12) 0%,
+        transparent 40%),
+
+        radial-gradient(
+        circle at 15% 85%,
+        rgba(191,219,254,.08) 0%,
+        transparent 38%),
+
+        linear-gradient(
+        180deg,
+        #d1d1d2 0%,
+        #f8fbff 45%,
+        #ffffff 100%);
+}
+
+/* ==========================================================
+   Background Decoration
+========================================================== */
+
+.philosophy::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:750px;
+    height:750px;
+
+    top:-320px;
+    right:-250px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(52,211,153,.18),
+    transparent 70%);
+
+    filter:blur(20px);
+
+    pointer-events:none;
+
+}
+
+.philosophy::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    bottom:-250px;
+    left:-180px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(16,185,129,.12),
+    transparent 70%);
+
+    filter:blur(20px);
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   Grid Overlay
+========================================================== */
+
+.philosophy .container{
+
+    position:relative;
+    z-index:2;
+
+    width:min(90%,1200px);
+    margin:auto;
+
+}
+
+.philosophy .container::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+        rgba(52,211,153,.025) 1px,
+        transparent 1px),
+
+        linear-gradient(
+        90deg,
+        rgba(52,211,153,.025) 1px,
+        transparent 1px);
+
+    background-size:70px 70px;
+
+    pointer-events:none;
+
+    opacity:.55;
+
+}
+
+/* ==========================================================
+   Header
+========================================================== */
+
+.philosophy-header{
+
+    position:relative;
+    z-index:2;
+
+    max-width:720px;
+
+    margin-bottom:70px;
+
+}
+
+.section-subtitle{
+    color:#3b82f6;
+}
+
+.number{
+    color:#3b82f6;
+}
+
+.principle:hover h3{
+    color:#3b82f6;
+}
+
+.principle:hover{
+    border-color:rgba(59,130,246,.25);
+}
+
+.philosophy-header h2{
+
+    color:#0f172a;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    margin-bottom:24px;
+
+}
+
+.philosophy-header p{
+
+    color:#64748b;
+
+    font-size:1.08rem;
+
+    line-height:1.95;
+
+    max-width:650px;
+
+}
+
+/* ==========================================================
+   Principles
+========================================================== */
+
+.philosophy-list{
+
+    position:relative;
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.principle{
+
+    display:grid;
+
+    grid-template-columns:80px 1fr;
+
+    gap:34px;
+
+    align-items:flex-start;
+
+    padding:38px 0;
+
+    border-top:1px solid rgba(15,23,42,.08);
+
+    transition:
+    transform .45s ease,
+    border-color .45s ease;
+
+}
+
+.principle:last-child{
+
+    border-bottom:1px solid rgba(15,23,42,.08);
+
+}
+
+.number{
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    color:#10b981;
+
+    opacity:.35;
+
+    transition:
+    opacity .4s ease,
+    transform .4s ease;
+
+}
+
+.principle-content h3{
+
+    color:#0f172a;
+
+    font-size:1.55rem;
+
+    font-weight:650;
+
+    margin-bottom:14px;
+
+    transition:.4s;
+
+}
+
+.principle-content p{
+
+    color:#64748b;
+
+    font-size:1rem;
+
+    line-height:1.95;
+
+    max-width:670px;
+
+    transition:.4s;
+
+}
+
+/* ==========================================================
+   Hover
+========================================================== */
+
+.principle:hover{
+
+    transform:translateX(12px);
+
+    border-color:rgba(16,185,129,.28);
+
+}
+
+.principle:hover .number{
+
+    opacity:1;
+
+    transform:translateX(8px);
+
+}
+
+.principle:hover h3{
+
+    color:#10b981;
+
+}
+
+.principle:hover p{
+
+    color:#334155;
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media(max-width:992px){
+
+    .philosophy{
+
+        padding:120px 0;
+
+    }
+
+    .philosophy .container{
+
+        width:92%;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .philosophy{
+
+        padding:100px 0;
+
+    }
+
+    .philosophy-header{
+
+        margin-bottom:55px;
+
+    }
+
+    .philosophy-header h2{
+
+        font-size:2.35rem;
+
+    }
+
+    .philosophy-header p{
+
+        font-size:1rem;
+
+    }
+
+    .principle{
+
+        grid-template-columns:1fr;
+
+        gap:15px;
+
+        padding:28px 0;
+
+    }
+
+    .number{
+
+        font-size:1.2rem;
+
+    }
+
+    .principle-content h3{
+
+        font-size:1.35rem;
+
+    }
+
+}

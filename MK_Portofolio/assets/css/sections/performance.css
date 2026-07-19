@@ -1,0 +1,250 @@
+
+/* ==========================================================
+   PERFORMANCE SECTION V2
+   Polished for premium fintech aesthetic.
+   Based on user's original CSS with refined visuals.
+========================================================== */
+
+.performance{
+    margin-top:-40px;
+    padding:70px 0 180px;
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    isolation:isolate;
+
+    background:
+        radial-gradient(circle at 10% 15%, rgba(59,130,246,.14), transparent 34%),
+        radial-gradient(circle at 85% 18%, rgba(14,165,233,.10), transparent 34%),
+        radial-gradient(circle at 80% 85%, rgba(37,99,235,.08), transparent 42%),
+        linear-gradient(180deg,#fcfdff 0%,#f6faff 45%,#ffffff 100%);
+}
+
+.performance::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:90px;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(236,246,255,.85),
+        rgba(236,246,255,.25),
+        transparent
+    );
+
+    pointer-events:none;
+    z-index:0;
+}
+
+.performance::after{
+    content:"";
+    position:absolute;
+    width:900px;
+    height:900px;
+    right:-260px;
+    bottom:-420px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(59,130,246,.12),transparent 70%);
+    filter:blur(50px);
+    pointer-events:none;
+}
+
+.performance .container{
+    position:relative;
+    width:min(90%,1300px);
+    margin:auto;
+    z-index:2;
+}
+
+.performance .container::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.45;
+    background-image:
+        linear-gradient(rgba(148,163,184,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(148,163,184,.03) 1px,transparent 1px);
+    background-size:72px 72px;
+}
+
+.section-tag{
+    display:inline-block;
+    margin-bottom:18px;
+    letter-spacing:4px;
+    font-size:13px;
+    font-weight:700;
+    color:#2563eb;
+    text-transform:uppercase;
+}
+
+.performance .section-title{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 90px;
+    position:relative;
+    z-index:2;
+}
+
+.performance .section-title h2{
+    font-size:clamp(2.6rem,5vw,3.5rem);
+    color:#0f172a;
+    margin-bottom:18px;
+}
+
+.performance .section-title p{
+    color:#64748b;
+    line-height:1.8;
+}
+
+.performance-metrics{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+    margin-bottom:36px;
+}
+
+.metric-card{
+    background:rgba(15,23,42,.94);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    padding:28px;
+    transition:.35s;
+    box-shadow:0 18px 40px rgba(15,23,42,.18);
+}
+
+.metric-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(96,165,250,.4);
+    box-shadow:0 30px 60px rgba(37,99,235,.18);
+}
+
+.metric-card h3{font-size:14px;color:#94a3b8;margin-bottom:18px;}
+.metric-card p{font-size:2rem;font-weight:700;color:#fff;margin-bottom:8px;}
+.metric-card span{color:#cbd5e1;font-size:14px;}
+
+.performance-dashboard{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:24px;
+    margin-bottom:42px;
+}
+
+.equity-chart{
+    min-height:430px;
+    background:linear-gradient(180deg,#0f172a,#111827);
+    border-radius:26px;
+    border:1px solid rgba(255,255,255,.08);
+    padding:32px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 24px 60px rgba(15,23,42,.25);
+}
+
+.equity-chart::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+    background-size:60px 60px;
+    pointer-events:none;
+}
+
+.chart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;}
+.chart-header h3{color:#fff;}
+.chart-header span{color:#60a5fa;font-size:12px;letter-spacing:2px;text-transform:uppercase;}
+
+.chart-body{flex:1;display:flex;align-items:center;justify-content:center;}
+
+.chart-placeholder{
+    width:100%;
+    height:100%;
+    border-radius:18px;
+    border:2px dashed rgba(255,255,255,.08);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.chart-icon{font-size:60px;margin-bottom:20px;}
+.chart-placeholder p{color:#cbd5e1;max-width:320px;line-height:1.8;}
+
+.monthly-performance{
+    background:rgba(255,255,255,.78);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(148,163,184,.18);
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+}
+
+.panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;}
+.panel-header h3{color:#0f172a;}
+.panel-header span{color:#2563eb;font-weight:700;}
+
+.performance-table{display:flex;flex-direction:column;gap:14px;}
+.table-row{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:14px 0;
+ border-bottom:1px solid #e5e7eb;
+}
+.table-row span{color:#64748b;}
+.table-row strong{color:#2563eb;}
+
+.proof-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.proof-card{
+    min-height:190px;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(148,163,184,.18);
+    border-radius:22px;
+    padding:28px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(15,23,42,.06);
+}
+
+.proof-card:hover{
+    transform:translateY(-8px);
+    border-color:#60a5fa;
+    box-shadow:0 28px 60px rgba(37,99,235,.16);
+}
+
+.proof-icon{font-size:40px;margin-bottom:16px;}
+.proof-card h4{color:#0f172a;margin-bottom:10px;}
+.proof-card p{color:#64748b;line-height:1.7;font-size:14px;}
+
+@media (max-width:1100px){
+.performance-metrics,
+.proof-grid{grid-template-columns:repeat(2,1fr);}
+.performance-dashboard{grid-template-columns:1fr;}
+}
+
+@media (max-width:700px){
+.performance{padding:90px 0 120px;margin-top:0;}
+.performance-metrics,
+.proof-grid{grid-template-columns:1fr;}
+.performance .section-title{margin-bottom:60px;}
+.performance .section-title h2{font-size:2.3rem;}
+}

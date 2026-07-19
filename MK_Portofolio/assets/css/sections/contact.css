@@ -1,0 +1,199 @@
+/* =========================
+   Contact Section
+========================= */
+
+.contact{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:180px auto;
+}
+
+.contact-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    margin-top:70px;
+
+    align-items:start;
+}
+.contact-info-title{
+
+    font-size:32px;
+
+    color:#111827;
+
+    margin-bottom:18px;
+}
+
+.contact-info-description{
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+}
+.info-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:16px 20px;
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:20px;
+
+    margin-bottom:16px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+
+    cursor:pointer;
+}
+.info-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+    border-color:#14b87a;
+}
+.info-icon{
+
+    width:58px;
+    height:58px;
+    font-size:24px;
+
+    border-radius:18px;
+
+    background:#14b87a;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    flex-shrink:0;
+}
+.info-icon svg{
+
+    width:26px;
+
+    height:26px;
+
+    stroke:#ffffff;
+
+    color:#ffffff;
+
+    stroke-width:2.2;
+
+}
+.info-content h3{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:#101828;
+
+    margin-bottom:6px;
+
+}
+.info-content p{
+
+    font-size:18px;
+
+    color:#667085;
+
+    line-height:1.6;
+
+}
+/* Contact form */
+
+.contact-form{
+
+    background:#ffffff;
+
+    padding:32px;
+
+    border-radius:24px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.05);
+}
+.contact-form-title{
+
+    font-size:32px;
+
+    color:#111827;
+
+    margin-bottom:35px;
+}
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:24px;
+}
+.form-group label{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    color:#111827;
+}
+.form-group input,
+
+.form-group textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-family:inherit;
+
+    outline:none;
+
+    transition:.3s ease;
+}
+.form-group input:focus,
+
+.form-group textarea:focus{
+
+    border-color:#14b87a;
+
+    box-shadow:0 0 0 4px rgba(20,184,122,.12);
+}
+.form-group textarea{
+
+    resize:none;
+}
